@@ -15,7 +15,7 @@ body {
 }
 
 body {
-    background: #f8fafc;
+    background: $aii-white;
     color: $aii-dark-grey;
     transition: background 220ms ease, color 220ms ease;
 }
@@ -700,5 +700,11 @@ body.theme-dark {
 
     #scroll-top i {
         color: $aii-white;
+    }
+
+    /* Hero: force truly dark background in dark mode (overrides light theme gradient) */
+    .hero-section {
+        background: #020617 !important;
+        color: $aii-white-grey !important;
     }
 }
