@@ -114,3 +114,109 @@
         background-color: $aii-white;
     }
 }
+
+.theme-toggle-btn {
+    width: 52px;
+    height: 30px;
+    padding: 0;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    background: rgba(15, 23, 42, 0.03);
+    cursor: pointer;
+    position: relative;
+    transition: background 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+
+    .toggle-track {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .toggle-thumb {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        border-radius: 999px;
+        background: #ffffff;
+        left: 4px;
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+        transition: transform 180ms ease, background 180ms ease;
+
+        &.is-dark {
+            transform: translateX(18px);
+            background: #020617;
+        }
+    }
+
+    .toggle-icon {
+        position: absolute;
+        font-size: 14px;
+        opacity: 0;
+        transform: scale(0.7);
+        transition: opacity 180ms ease, transform 180ms ease;
+        color: $aii-dark-grey;
+
+        &.icon-sun {
+            left: 9px;
+        }
+
+        &.icon-moon {
+            right: 9px;
+        }
+
+        &.is-active {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+body.theme-dark {
+    .sticky-header {
+        background: rgba(15, 23, 42, 0.9);
+        backdrop-filter: blur(18px);
+        border-bottom-color: rgba(45, 212, 191, 0.75);
+        box-shadow:
+            0 18px 45px rgba(15, 23, 42, 0.85),
+            0 0 0 1px rgba(15, 23, 42, 0.9);
+    }
+
+    .navbar {
+        .nav-link {
+            color: $aii-light-grey !important;
+
+            &:hover,
+            &.active {
+                color: $aii-white !important;
+            }
+        }
+    }
+
+    .burger {
+        .burger-line {
+            background-color: $aii-white;
+        }
+    }
+
+    .mobile-menu {
+        background: radial-gradient(circle at top, rgba(45, 212, 191, 0.05) 0, transparent 50%),
+            #020617;
+
+        li a {
+            border-bottom-color: rgba(45, 212, 191, 0.55);
+        }
+    }
+
+    .theme-toggle-btn {
+        background: rgba(15, 23, 42, 0.8);
+        border-color: rgba(45, 212, 191, 0.65);
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.95);
+
+        .toggle-icon {
+            color: $aii-white;
+        }
+    }
+}

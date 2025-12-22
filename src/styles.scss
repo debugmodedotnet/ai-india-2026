@@ -14,6 +14,20 @@ body {
     font-family: $aii-poppins-regular !important;
 }
 
+body {
+    background: #f8fafc;
+    color: $aii-dark-grey;
+    transition: background 220ms ease, color 220ms ease;
+}
+
+body.theme-dark {
+    background:
+        radial-gradient(circle at top left, rgba(45, 212, 191, 0.18) 0, transparent 45%),
+        radial-gradient(circle at top right, rgba(56, 189, 248, 0.22) 0, transparent 55%),
+        #020617;
+    color: $aii-white-grey;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -446,12 +460,18 @@ inset-0 {
     padding-right: 1rem;
     line-height: 1.5rem;
     font-weight: 500;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 999px;
+    box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.18),
+        0 0 0 1px rgba(15, 23, 42, 0.04);
+    transition: background-color 180ms ease, color 180ms ease, box-shadow 180ms ease,
+        transform 120ms ease;
 }
 
 .aii-btn-primary:hover {
     --bg-opacity: 1;
     background-color: $aii-dark-grey;
+    transform: translateY(-1px);
 }
 
 .aii-btn-outline {
@@ -487,6 +507,11 @@ inset-0 {
     &::after {
         left: 185px;
     }
+}
+
+.aii-btn-outline:hover {
+    background-color: rgba(15, 23, 42, 0.02);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
 }
 
 .aii-btn-primary:disabled {
@@ -623,5 +648,57 @@ inset-0 {
 .heading {
     h2 {
         font-size: 35px;
+    }
+}
+
+/*-------------------------------------------------------------------------
+# Dark theme refinements
+-------------------------------------------------------------------------*/
+body.theme-dark {
+    .aii-bg-white,
+    .aii-bg-light,
+    .aii-bg-white-grey {
+        background-color: #020617 !important;
+        color: $aii-white-grey !important;
+    }
+
+    .aii-dark-grey,
+    .aii-black {
+        color: $aii-white-grey !important;
+    }
+
+    .aii-bg-grey {
+        background-color: #020617 !important;
+    }
+
+    .aii-btn-primary {
+        background-image: linear-gradient(135deg, #22c55e 0%, #0ea5e9 45%, #0f766e 100%);
+        box-shadow:
+            0 18px 45px rgba(15, 23, 42, 0.75),
+            0 0 0 1px rgba(148, 163, 184, 0.24);
+    }
+
+    .aii-btn-primary:hover {
+        background-image: linear-gradient(135deg, #22c55e 0%, #0ea5e9 35%, #0369a1 100%);
+    }
+
+    .aii-btn-outline {
+        background-color: transparent;
+        color: $aii-white-grey;
+        border-color: rgba(148, 163, 184, 0.55);
+    }
+
+    .aii-btn-outline:hover {
+        background-color: rgba(15, 23, 42, 0.8);
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    #scroll-top {
+        background-color: rgba(15, 23, 42, 0.9);
+        box-shadow: 0 14px 35px rgba(15, 23, 42, 0.9);
+    }
+
+    #scroll-top i {
+        color: $aii-white;
     }
 }

@@ -17,3 +17,33 @@
         margin-top: 10px;
     }
 }
+
+body.theme-dark {
+    .speakers-section {
+        background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.2) 0, transparent 55%),
+            #020617;
+    }
+
+    .speaker {
+        .speaker-img figure {
+            border-color: rgba(45, 212, 191, 0.85);
+            box-shadow:
+                0 22px 55px rgba(15, 23, 42, 0.95),
+                0 0 0 1px rgba(15, 23, 42, 0.9);
+        }
+
+        .speaker-info {
+            h3 {
+                color: #f9fafb;
+            }
+
+            span {
+                color: #e5e7eb;
+            }
+        }
+
+        .social a {
+            color: #e5e7eb !important;
+        }
+    }
+}
