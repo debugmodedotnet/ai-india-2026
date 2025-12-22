@@ -3,6 +3,7 @@
 .sponsors-section {
     .client-logo {
         border: 1px solid color-mix(in srgb, $aii-dark-grey, transparent 85%);
+        background-color: $aii-light;
 
         figure {
             //width: 230px;
@@ -35,4 +36,22 @@
         color: #ffb300;
     }
 
+}
+
+body.theme-dark {
+    .sponsors-section {
+        background:
+            radial-gradient(circle at top, rgba(45, 212, 191, 0.08) 0, transparent 45%),
+            radial-gradient(circle at bottom, rgba(15, 23, 42, 0.95) 0, #020617 65%);
+
+        .client-logo {
+            // Dark theme: same card structure as light, just on a deeper surface
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            background-color: rgba(15, 23, 42, 0.96);
+
+            img {
+                filter: brightness(1.06) contrast(1.03);
+            }
+        }
+    }
 }

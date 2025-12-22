@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -7,9 +7,40 @@ import { RouterModule } from '@angular/router';
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
-export class Header {
+export class Header implements OnInit {
 
   mobileMenuOpen = false;
+  isDarkMode = false;
+
+  ngOnInit() {
+    const storedTheme = window.localStorage.getItem('aii-theme');
+
+    if (storedTheme === 'dark' || storedTheme === 'light') {
+      this.isDarkMode = storedTheme === 'dark';
+    } else {
+      const prefersDark = window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches;
+      this.isDarkMode = prefersDark;
+    }
+
+    this.applyTheme();
+  }
+
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    window.localStorage.setItem('aii-theme', this.isDarkMode ? 'dark' : 'light');
+    this.applyTheme();
+  }
+
+  private applyTheme() {
+    const body = document.body;
+
+    if (this.isDarkMode) {
+      body.classList.add('theme-dark');
+    } else {
+      body.classList.remove('theme-dark');
+    }
+  }
 
   toggleMobileMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
