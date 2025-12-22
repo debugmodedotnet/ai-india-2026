@@ -1,0 +1,186 @@
+<header class="sticky-header aii-bg-white fixed-top">
+  <!-- Mobile Navigation -->
+  <ul
+    class="mobile-menu position-absolute text-center p-0 m-0 aii-bg-dark-grey w-100"
+  >
+    <li
+      class="w-100 py-4"
+      (click)="closeMobileMenu()"
+      (keydown)="closeMobileMenu()"
+      tabindex="0"
+    >
+      <a class="font-18 poppins-bold aii-white" href="home">Home</a>
+    </li>
+
+    <li
+      class="w-100 py-4"
+      (click)="closeMobileMenu()"
+      (keydown)="closeMobileMenu()"
+      tabindex="0"
+    >
+      <a class="font-18 poppins-bold aii-white" href="/speakers">Speakers</a>
+    </li>
+
+    <li
+      class="w-100 py-4"
+      (click)="closeMobileMenu()"
+      (keydown)="closeMobileMenu()"
+      tabindex="0"
+    >
+      <a class="font-18 poppins-bold aii-white" href="/agenda">Agenda</a>
+    </li>
+
+    <li
+      class="w-100 py-4"
+      (click)="closeMobileMenu()"
+      (keydown)="closeMobileMenu()"
+      tabindex="0"
+    >
+      <a class="font-18 poppins-bold aii-white" href="/sponsors">Sponsors</a>
+    </li>
+
+    <li
+      class="w-100 py-4"
+      (click)="closeMobileMenu()"
+      (keydown)="closeMobileMenu()"
+      tabindex="0"
+    >
+      <a class="font-18 poppins-bold aii-white" href="/venue">Venue</a>
+    </li>
+
+    <!-- <li
+      class="w-100 py-4"
+      (click)="closeMobileMenu()"
+      (keydown)="closeMobileMenu()"
+      tabindex="0"
+    >
+      <a class="font-18 poppins-bold aii-white" href="/coc">CoC</a>
+    </li> -->
+
+    <li class="w-100 py-4">
+      <button
+        class="aii-btn-primary px-3 px-lg-5 h-auto py-3 font-20"
+        type="button"
+        href="/pricing"
+      >
+        Buy Tickets
+      </button>
+    </li>
+  </ul>
+
+  <div class="container-boxed">
+    <div class="inner d-flex align-items-center justify-content-between py-3">
+      <!-- Logo -->
+      <a href="/" class="d-flex align-items-center">
+        <!-- <figure class="logo m-0 overflow-hidden me-2">
+          <img
+            src="assets/images/logo/ai.png"
+            loading="lazy"
+            alt="ng-India Logo"
+            class="w-100 h-100 object-fit-contain"
+          />
+        </figure> -->
+
+        <div>
+          <h3 class="poppins-semibold m-0 aii-dark-grey">AI-India</h3>
+          <div class="d-flex gap-1">
+            <p class="aii-dark-grey font-12 m-0">powered by</p>
+            <img
+              class="nomad-logo object-fit-contain"
+              src="assets/images/logo/nomadcoder-logo.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </a>
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-xl">
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          (click)="toggleMobileMenu()"
+          aria-label="Toggle mobile menu"
+        >
+          <div class="burger" id="burger">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </div>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end align-items-center"
+          id="navbar"
+        >
+          <ul class="navbar-nav mb-lg-0 gap-3 align-items-center">
+            <!-- <li class="nav-item">
+              <a
+                class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1"
+                [routerLink]="['/']"
+                fragment="about"
+                >About</a
+              >
+            </li> -->
+
+            <li class="nav-item">
+              <a
+                class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1"
+                [routerLink]="['/']"
+                fragment="speakers"
+                >Speakers</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1"
+                [routerLink]="['/']"
+                fragment="agenda"
+                >Agenda</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1"
+                [routerLink]="['/']"
+                fragment="sponsors"
+                >Sponsors</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1"
+                [routerLink]="['/']"
+                fragment="venue"
+                >Venue</a
+              >
+            </li>
+
+            <!-- <li class="nav-item">
+              <a
+                class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1"
+                [routerLink]="['/']"
+                fragment="coc"
+                >Coc</a
+              >
+            </li> -->
+
+            <li>
+              <button
+                class="aii-btn-primary px-3 px-lg-5 h-auto py-3 font-20"
+                type="button"
+                [routerLink]="['/']"
+                fragment="pricing"
+              >
+                Buy Tickets
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,20 @@
+@use "../../styles/variables" as *;
+
+@media (max-width: 420px) {
+
+    .text-bottom-line::after {
+        inset: 44px 0 0 0;
+    }
+
+    .coc-section {
+        .heading {
+            h2 {
+                font-size: 30px;
+            }
+        }
+
+        .contact-links a {
+            font-size: 16px !important;
+        }
+    }
+}

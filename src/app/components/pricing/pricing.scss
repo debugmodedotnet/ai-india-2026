@@ -1,0 +1,54 @@
+@use "../../styles/variables" as *;
+
+.pricing-section {
+    .pricing-table {
+        padding: 30px;
+        background: $aii-white;
+        -webkit-box-shadow: 0px 24px 48px -13px rgba(0, 0, 0, 0.11);
+        -moz-box-shadow: 0px 24px 48px -13px rgba(0, 0, 0, 0.11);
+        box-shadow: 0px 24px 48px -13px rgba(0, 0, 0, 0.11);
+        transition: ease all .3s;
+        position: relative;
+
+        .price {
+            sup {
+                font-size: 24px;
+                top: -1em;
+            }
+
+            .number {
+                font-size: 60px;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            -webkit-box-shadow: 0px 24px 48px -13px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0px 24px 48px -13px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 24px 48px -13px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    figure {
+        max-width: 275px;
+        height: 100%;
+    }
+}
+
+a.disabled {
+    color: white;
+    background-color: grey;
+    pointer-events: none;
+}
+
+@media (max-width: 992px) {
+    .pricing-section .pricing-table .price .number {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 375px) {
+    .note h3 {
+        font-size: 20px;
+    }
+}

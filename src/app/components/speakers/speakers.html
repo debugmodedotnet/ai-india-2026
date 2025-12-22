@@ -1,0 +1,68 @@
+<section class="speakers-section py-5 aii-bg-white">
+  <div class="container-boxed">
+    <div class="text-center heading mb-5">
+      <h2 class="mb-4 text-bottom-line position-relative poppins-semibold">
+        Speakers
+      </h2>
+    </div>
+
+    <div class="speakers-list row g-3">
+      @for (speaker of speakers; track speaker;) {
+      <div class="col-12 col-sm-6 col-lg-4 mt-5">
+        <div class="speaker text-center">
+          <div class="speaker-img position-relative">
+            <figure class="m-0 overflow-hidden rounded-circle m-auto">
+              <img
+                [src]="speaker.image"
+                class="h-100 w-100 object-fit-cover"
+                alt=""
+              />
+            </figure>
+          </div>
+
+          <div class="speaker-info mt-3">
+            <h3 class="aii-primary poppins-semibold pe-2 position-relative">
+              {{ speaker.name }}
+
+              <span class="aii-medium-grey poppins-regular font-18">{{
+                speaker.position
+              }}</span>
+            </h3>
+
+            <!-- <p class="aii-medium-grey">
+              {{ speaker.bio }}
+            </p> -->
+
+            <div
+              class="social d-flex align-items-center justify-content-center gap-2"
+            >
+              @if(speaker.twitter){
+              <a
+                target="_blank"
+                [href]="speaker.twitter"
+                class="font-20 aii-dark-grey"
+              >
+                <i class="bi bi-twitter-x"></i> </a
+              >} @if(speaker.github){
+              <a
+                target="_blank"
+                [href]="speaker.github"
+                class="font-20 aii-dark-grey"
+              >
+                <i class="bi bi-github"> </i> </a
+              >} @if(speaker.linkedin){
+              <a
+                target="_blank"
+                [href]="speaker.linkedin"
+                class="font-20 aii-dark-grey"
+              >
+                <i class="bi bi-linkedin"></i> </a
+              >}
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

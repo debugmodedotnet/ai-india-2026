@@ -1,0 +1,19 @@
+@use "../../styles/variables" as *;
+
+.speaker {
+    .speaker-img figure {
+        width: 250px;
+        height: 250px;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+        border: 2px solid $aii-primary;
+
+        img {
+            object-position: top;
+        }
+    }
+
+    .speaker-info span {
+        display: block;
+        margin-top: 10px;
+    }
+}
