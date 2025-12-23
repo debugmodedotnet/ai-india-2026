@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-venue',
   imports: [],
   templateUrl: './venue.html',
-  styleUrl: './venue.scss'
+  styleUrls: ['./venue.scss']
 })
 export class Venue {
 

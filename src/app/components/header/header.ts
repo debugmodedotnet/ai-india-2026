@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   imports: [RouterModule],
   templateUrl: './header.html',
-  styleUrl: './header.scss'
+  styleUrls: ['./header.scss']
 })
 export class Header implements OnInit {
 
   mobileMenuOpen = false;
   isDarkMode = false;
+
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit() {
     const storedTheme = window.localStorage.getItem('aii-theme');
@@ -18,9 +20,8 @@ export class Header implements OnInit {
     if (storedTheme === 'dark' || storedTheme === 'light') {
       this.isDarkMode = storedTheme === 'dark';
     } else {
-      const prefersDark = window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches;
-      this.isDarkMode = prefersDark;
+      // Default to dark when user hasn't chosen a theme
+      this.isDarkMode = true;
     }
 
     this.applyTheme();
@@ -34,11 +35,10 @@ export class Header implements OnInit {
 
   private applyTheme() {
     const body = document.body;
-
     if (this.isDarkMode) {
-      body.classList.add('theme-dark');
+      this.renderer.addClass(body, 'theme-dark');
     } else {
-      body.classList.remove('theme-dark');
+      this.renderer.removeClass(body, 'theme-dark');
     }
   }
 

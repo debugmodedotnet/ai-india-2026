@@ -182,6 +182,8 @@
             <li class="nav-item d-flex align-items-center">
               <button
                 type="button"
+                role="switch"
+                [attr.aria-pressed]="isDarkMode"
                 class="theme-toggle-btn d-inline-flex align-items-center justify-content-center ms-2"
                 (click)="toggleTheme()"
                 [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
