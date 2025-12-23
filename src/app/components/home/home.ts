@@ -13,7 +13,7 @@ import { Sponsors } from "../sponsors/sponsors";
   selector: 'app-home',
   imports: [Hero, Venue, About, Speakers, Agenda, Pricing, RouterLink, Sponsors],
   templateUrl: './home.html',
-  styleUrl: './home.scss'
+  styleUrls: ['./home.scss']
 })
 export class Home implements AfterViewInit {
 

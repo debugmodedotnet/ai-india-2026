@@ -134,7 +134,7 @@
     }
 }
 
-body.theme-dark {
+:host-context(body.theme-dark) {
     .about-section {
         background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18) 0, transparent 55%),
             #020617;

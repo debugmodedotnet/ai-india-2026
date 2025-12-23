@@ -38,20 +38,20 @@
 
 }
 
-body.theme-dark {
+:host-context(body.theme-dark) {
     .sponsors-section {
         background:
             radial-gradient(circle at top, rgba(45, 212, 191, 0.08) 0, transparent 45%),
             radial-gradient(circle at bottom, rgba(15, 23, 42, 0.95) 0, #020617 65%);
 
         .client-logo {
-            // Dark theme: same card structure as light, just on a deeper surface
-            border: 1px solid rgba(148, 163, 184, 0.45);
-            background-color: rgba(15, 23, 42, 0.96);
+                // In dark mode keep sponsor cards with a light surface to preserve brand logos
+                border: 1px solid rgba(148, 163, 184, 0.28);
+                background-color: $aii-light !important;
 
-            img {
-                filter: brightness(1.06) contrast(1.03);
+                img {
+                    filter: none !important;
+                }
             }
-        }
     }
 }

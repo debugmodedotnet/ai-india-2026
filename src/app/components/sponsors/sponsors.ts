@@ -6,7 +6,7 @@ import { sponsors } from '../../dto/sponsors.json';
   selector: 'app-sponsors',
   imports: [],
   templateUrl: './sponsors.html',
-  styleUrl: './sponsors.scss'
+  styleUrls: ['./sponsors.scss']
 })
 export class Sponsors {
 

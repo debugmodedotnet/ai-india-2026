@@ -6,7 +6,7 @@ import { speakers } from '../../dto/speakers.json';
   selector: 'app-speakers',
   imports: [],
   templateUrl: './speakers.html',
-  styleUrl: './speakers.scss'
+  styleUrls: ['./speakers.scss']
 })
 export class Speakers implements OnInit {
 

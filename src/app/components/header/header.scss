@@ -143,24 +143,28 @@
         background: #ffffff;
         left: 4px;
         box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
-        transition: transform 180ms ease, background 180ms ease;
+        transition: transform 200ms ease, background 200ms ease, box-shadow 200ms ease;
 
         &.is-dark {
             transform: translateX(18px);
             background: #020617;
         }
+
+        z-index: 1;
     }
 
     .toggle-icon {
         position: absolute;
         font-size: 14px;
         opacity: 0;
-        transform: scale(0.7);
-        transition: opacity 180ms ease, transform 180ms ease;
+        transform: translateY(-50%) scale(0.7);
+        top: 15.2px;
+        transition: opacity 200ms ease, transform 200ms ease;
         color: $aii-dark-grey;
+        z-index: 2;
 
         &.icon-sun {
-            left: 9px;
+            left: 8px;
         }
 
         &.icon-moon {
@@ -169,12 +173,29 @@
 
         &.is-active {
             opacity: 1;
-            transform: scale(1);
+            transform: translateY(-50%) scale(1);
+        }
+    }
+
+    /* keyboard focus ring for accessibility */
+    .theme-toggle-btn:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.18), 0 0 0 1px rgba(59, 130, 246, 0.32);
+    }
+
+    /* Respect reduced-motion user preference */
+    @media (prefers-reduced-motion: reduce) {
+
+        .theme-toggle-btn,
+        .theme-toggle-btn .toggle-thumb,
+        .theme-toggle-btn .toggle-icon {
+            transition: none !important;
+            animation: none !important;
         }
     }
 }
 
-body.theme-dark {
+:host-context(body.theme-dark) {
     .sticky-header {
         background: rgba(15, 23, 42, 0.9);
         backdrop-filter: blur(18px);

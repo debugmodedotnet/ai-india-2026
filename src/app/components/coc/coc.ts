@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-coc',
   imports: [],
   templateUrl: './coc.html',
-  styleUrl: './coc.scss'
+  styleUrls: ['./coc.scss']
 })
 export class Coc {
 
