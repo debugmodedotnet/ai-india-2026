@@ -10,9 +10,19 @@
     height: 50px;
 }
 
-.nomad-logo {
-    width: 100px;
-    height: auto;
+.nomadcoder-text {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+
+    .nomad-text {
+        color: #e63946;
+        font-weight: 600;
+    }
+
+    .coder-text {
+        color: #000000;
+        font-weight: 600;
+    }
 }
 
 .navbar-toggler:focus {
@@ -219,6 +229,16 @@
     .burger {
         .burger-line {
             background-color: $aii-white;
+        }
+    }
+
+    .nomadcoder-text {
+        .nomad-text {
+            color: #ff6b6b;
+        }
+
+        .coder-text {
+            color: $aii-white;
         }
     }
 

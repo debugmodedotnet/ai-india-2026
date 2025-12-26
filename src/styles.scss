@@ -196,6 +196,34 @@ textarea {
     font-size: 80px !important;
 }
 
+/* Responsive font sizes for tablets and desktops */
+@media (min-width: 768px) {
+    .font-md-14 { font-size: 0.875rem !important; }
+    .font-md-16 { font-size: 1rem !important; }
+    .font-md-18 { font-size: 1.125rem !important; }
+    .font-md-20 { font-size: 1.25rem !important; }
+    .font-md-22 { font-size: 1.375rem !important; }
+    .font-md-24 { font-size: 1.5rem !important; }
+    .font-md-26 { font-size: 1.625rem !important; }
+    .font-md-28 { font-size: 1.75rem !important; }
+    .font-md-30 { font-size: 1.875rem !important; }
+    .font-md-32 { font-size: 2rem !important; }
+}
+
+@media (min-width: 992px) {
+    .font-lg-14 { font-size: 0.875rem !important; }
+    .font-lg-16 { font-size: 1rem !important; }
+    .font-lg-18 { font-size: 1.125rem !important; }
+    .font-lg-20 { font-size: 1.25rem !important; }
+    .font-lg-22 { font-size: 1.375rem !important; }
+    .font-lg-24 { font-size: 1.5rem !important; }
+    .font-lg-26 { font-size: 1.625rem !important; }
+    .font-lg-28 { font-size: 1.75rem !important; }
+    .font-lg-30 { font-size: 1.875rem !important; }
+    .font-lg-32 { font-size: 2rem !important; }
+    .font-lg-38 { font-size: 2.375rem !important; }
+}
+
 /*-------------------------------------------------------------------------
 # Width
 -------------------------------------------------------------------------*/

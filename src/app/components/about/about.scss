@@ -9,28 +9,47 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    grid-gap: 16px;
+    grid-gap: clamp(1rem, 4vw, 1.5rem);
     max-width: 1100px;
     width: 100%;
-    margin: 300px auto 50px;
+    margin: clamp(4rem, 25vw, 300px) auto 2rem;
+
+    @media (min-width: 768px) {
+        margin: clamp(5rem, 25vw, 300px) auto 3rem;
+    }
+
+    @media (min-width: 992px) {
+        margin: 300px auto 50px;
+    }
 
     .ai-topic-card {
         position: relative;
         display: flex;
         flex-direction: column;
-        height: 450px;
-        padding: 55px 50px;
+        height: auto;
+        min-height: 280px;
+        padding: clamp(1.5rem, 8vw, 3.5rem) clamp(1.5rem, 6vw, 3rem);
         font-family: "Sf Pro Display 1", Arial, sans-serif;
-        font-size: 40px;
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
         font-weight: 300;
         line-height: 1.1em;
         background-color: #fcd628;
         color: var(--black);
         z-index: 1;
 
+        @media (min-width: 768px) {
+            height: auto;
+            min-height: 350px;
+            padding: 55px 50px;
+        }
+
+        @media (min-width: 992px) {
+            height: 450px;
+        }
+
         .ai-topic-title {
             font-family: "Sf Pro Text", Arial, sans-serif;
-            font-size: 90px;
+            font-size: clamp(3rem, 10vw, 5.625rem);
             font-weight: 900;
             line-height: 1;
             letter-spacing: -0.07em;
@@ -47,26 +66,56 @@
         &.card-2 {
             background-color: #b82623;
             color: $aii-white;
-            margin-top: -190px;
+            margin-top: -50px;
             transform: rotate(8deg);
+
+            @media (min-width: 768px) {
+                margin-top: -120px;
+            }
+
+            @media (min-width: 992px) {
+                margin-top: -190px;
+            }
         }
 
         &.card-3 {
             background-color: #5b7747;
             color: $aii-white;
-            margin-top: -94px;
-            margin-left: 38px;
-            margin-right: -38px;
+            margin-top: -30px;
+            margin-left: 0;
+            margin-right: 0;
             transform: rotate(-6.5deg);
             z-index: 115;
+
+            @media (min-width: 768px) {
+                margin-top: -60px;
+                margin-left: 20px;
+                margin-right: -20px;
+            }
+
+            @media (min-width: 992px) {
+                margin-top: -94px;
+                margin-left: 38px;
+                margin-right: -38px;
+            }
         }
 
         &.card-4 {
             background-color: #e3bbe1;
-            margin-top: -222px;
-            margin-left: 2px;
+            margin-top: -40px;
+            margin-left: 0;
             transform: rotate(6.5deg);
             z-index: 114;
+
+            @media (min-width: 768px) {
+                margin-top: -130px;
+                margin-left: 0;
+            }
+
+            @media (min-width: 992px) {
+                margin-top: -222px;
+                margin-left: 2px;
+            }
         }
 
         &.card-5 {
