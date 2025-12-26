@@ -66,6 +66,28 @@
         Buy Tickets
       </button>
     </li>
+
+    <li class="w-100 py-4 d-flex justify-content-center align-items-center">
+      <button
+        type="button"
+        role="switch"
+        [attr.aria-pressed]="isDarkMode"
+        class="theme-toggle-btn d-inline-flex align-items-center justify-content-center"
+        (click)="toggleTheme()"
+        [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+        [attr.title]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+      >
+        <span class="toggle-track">
+          <span class="toggle-thumb" [class.is-dark]="isDarkMode"></span>
+          <span class="toggle-icon icon-sun" [class.is-active]="!isDarkMode">
+            <i class="bi bi-sun"></i>
+          </span>
+          <span class="toggle-icon icon-moon" [class.is-active]="isDarkMode">
+            <i class="bi bi-moon-stars"></i>
+          </span>
+        </span>
+      </button>
+    </li>
   </ul>
 
   <div class="container-boxed">
@@ -83,13 +105,11 @@
 
         <div>
           <h3 class="poppins-semibold m-0 aii-dark-grey">AI-India</h3>
-          <div class="d-flex gap-1">
+          <div class="d-flex gap-1 align-items-center">
             <p class="aii-dark-grey font-12 m-0">powered by</p>
-            <img
-              class="nomad-logo object-fit-contain"
-              src="assets/images/logo/nomadcoder-logo.png"
-              alt=""
-            />
+            <span class="nomadcoder-text poppins-semibold">
+              <span class="nomad-text">nomad</span><span class="coder-text">coder</span>
+            </span>
           </div>
         </div>
       </a>
