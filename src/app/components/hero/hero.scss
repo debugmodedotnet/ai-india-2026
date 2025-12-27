@@ -18,13 +18,57 @@
     }
 
     .hero-text {
-        h1 {
-            font-size: 90px;
+        .hero-title {
+            display: inline-block;
+            font-size: clamp(1.6rem, 6.5vw, 4.5rem);
+            line-height: 1.02;
+            margin-bottom: 0.25rem;
+            text-align: center;
+            font-weight: 700;
         }
 
-        sup {
-            top: -50px;
-            right: 10px;
+        /* keep the edition as a proper superscript but responsive */
+        .edition-sup {
+            display: inline-block;
+            font-size: clamp(0.65rem, 2.2vw, 0.95rem);
+            vertical-align: super;
+            margin-left: 0.4rem;
+            transform: translateY(-0.18em);
+            padding: 0.12rem 0.4rem;
+            border-radius: 0.25rem;
+            line-height: 1;
+        }
+
+        @media (min-width: 576px) {
+            .hero-title {
+                font-size: clamp(1.9rem, 6.2vw, 4.8rem);
+            }
+            .edition-sup {
+                font-size: clamp(0.7rem, 1.8vw, 0.98rem);
+                transform: translateY(-0.22em);
+                margin-left: 0.45rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: clamp(2.2rem, 5.6vw, 5.2rem);
+                text-align: center;
+            }
+            .edition-sup {
+                font-size: clamp(0.75rem, 1.6vw, 1rem);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .hero-title {
+                text-align: left;
+                font-size: clamp(2.6rem, 4.8vw, 5.625rem);
+            }
+            .edition-sup {
+                transform: translateY(-0.35em);
+                margin-left: 0.6rem;
+            }
         }
     }
 
@@ -32,11 +76,11 @@
         max-width: 150px;
         animation: float-up-down 4s ease-in-out infinite;
         transform-origin: center;
-        
+
         @media (min-width: 768px) {
             max-width: 175px;
         }
-        
+
         @media (min-width: 992px) {
             max-width: 200px;
         }
