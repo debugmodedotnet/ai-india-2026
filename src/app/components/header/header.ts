@@ -11,9 +11,8 @@ export class Header implements OnInit {
 
   mobileMenuOpen = false;
   isDarkMode = false;
-    private router = inject(Router);
-
-  constructor(private renderer: Renderer2) { }
+  private router = inject(Router);
+  private renderer = inject(Renderer2);
 
   ngOnInit() {
     const storedTheme = window.localStorage.getItem('aii-theme');
