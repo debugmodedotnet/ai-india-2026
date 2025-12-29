@@ -1,5 +1,5 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, inject, OnInit, Renderer2 } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,8 +11,9 @@ export class Header implements OnInit {
 
   mobileMenuOpen = false;
   isDarkMode = false;
+    private router = inject(Router);
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
     const storedTheme = window.localStorage.getItem('aii-theme');
@@ -74,6 +75,10 @@ export class Header implements OnInit {
     hamburger.className = "navbar-toggler border-0 closed";
     const hamburgerIcon = document.querySelector('.burger') as HTMLElement;
     hamburgerIcon.className = "burger isClosed";
+  }
+
+  buyTickets() {
+    this.router.navigate([''], { fragment: 'pricing' });
   }
 
 }
