@@ -1,82 +1,33 @@
 <header class="sticky-header aii-bg-white fixed-top">
   <!-- Mobile Navigation -->
-  <ul
-    class="mobile-menu position-absolute text-center p-0 m-0 aii-bg-dark-grey w-100"
-  >
-    <li
-      class="w-100 py-4"
-      (click)="closeMobileMenu()"
-      (keydown)="closeMobileMenu()"
-      tabindex="0"
-    >
+  <ul class="mobile-menu position-absolute text-center p-0 m-0 aii-bg-dark-grey w-100">
+    <li class="w-100 py-4" (click)="closeMobileMenu()" (keydown)="closeMobileMenu()" tabindex="0">
       <a class="font-18 poppins-bold aii-white" href="">Home</a>
     </li>
 
-    <li
-      class="w-100 py-4"
-      (click)="closeMobileMenu()"
-      (keydown)="closeMobileMenu()"
-      tabindex="0"
-    >
+    <li class="w-100 py-4" (click)="closeMobileMenu()" (keydown)="closeMobileMenu()" tabindex="0">
       <a class="font-18 poppins-bold aii-white" href="/speakers">Speakers</a>
     </li>
 
-    <li
-      class="w-100 py-4"
-      (click)="closeMobileMenu()"
-      (keydown)="closeMobileMenu()"
-      tabindex="0"
-    >
+    <li class="w-100 py-4" (click)="closeMobileMenu()" (keydown)="closeMobileMenu()" tabindex="0">
       <a class="font-18 poppins-bold aii-white" href="/agenda">Agenda</a>
     </li>
 
-    <li
-      class="w-100 py-4"
-      (click)="closeMobileMenu()"
-      (keydown)="closeMobileMenu()"
-      tabindex="0"
-    >
+    <li class="w-100 py-4" (click)="closeMobileMenu()" (keydown)="closeMobileMenu()" tabindex="0">
       <a class="font-18 poppins-bold aii-white" href="/sponsors">Sponsors</a>
     </li>
 
-    <li
-      class="w-100 py-4"
-      (click)="closeMobileMenu()"
-      (keydown)="closeMobileMenu()"
-      tabindex="0"
-    >
-      <a class="font-18 poppins-bold aii-white" href="/venue">Venue</a>
-    </li>
-
-    <!-- <li
-      class="w-100 py-4"
-      (click)="closeMobileMenu()"
-      (keydown)="closeMobileMenu()"
-      tabindex="0"
-    >
-      <a class="font-18 poppins-bold aii-white" href="/coc">CoC</a>
-    </li> -->
-
     <li class="w-100 py-4">
-      <button
-        class="aii-btn-primary px-3 px-lg-5 h-auto py-3 font-20"
-        type="button"
-        href="/pricing"
-      >
+      <button class="aii-btn-primary px-3 px-lg-5 h-auto py-3 font-20" type="button" (click)="buyTickets()">
         Buy Tickets
       </button>
     </li>
 
     <li class="w-100 py-4 d-flex justify-content-center align-items-center">
-      <button
-        type="button"
-        role="switch"
-        [attr.aria-pressed]="isDarkMode"
-        class="theme-toggle-btn d-inline-flex align-items-center justify-content-center"
-        (click)="toggleTheme()"
+      <button type="button" role="switch" [attr.aria-pressed]="isDarkMode"
+        class="theme-toggle-btn d-inline-flex align-items-center justify-content-center" (click)="toggleTheme()"
         [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
-        [attr.title]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
-      >
+        [attr.title]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
         <span class="toggle-track">
           <span class="toggle-thumb" [class.is-dark]="isDarkMode"></span>
           <span class="toggle-icon icon-sun" [class.is-active]="!isDarkMode">
@@ -106,7 +57,7 @@
         <div>
           <h3 class="poppins-semibold m-0 aii-dark-grey">AI-India</h3>
           <div class="d-flex gap-1 align-items-center">
-            <p class="aii-dark-grey font-12 m-0">powered by</p>
+            <p class="aii-dark-grey font-14 m-0">powered by</p>
             <span class="nomadcoder-text poppins-semibold">
               <span class="nomad-text">nomad</span><span class="coder-text">coder</span>
             </span>
@@ -116,12 +67,8 @@
 
       <!-- Navbar -->
       <nav class="navbar navbar-expand-xl">
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          (click)="toggleMobileMenu()"
-          aria-label="Toggle mobile menu"
-        >
+        <button class="navbar-toggler border-0" type="button" (click)="toggleMobileMenu()"
+          aria-label="Toggle mobile menu">
           <div class="burger" id="burger">
             <span class="burger-line"></span>
             <span class="burger-line"></span>
@@ -129,10 +76,7 @@
           </div>
         </button>
 
-        <div
-          class="collapse navbar-collapse justify-content-end align-items-center"
-          id="navbar"
-        >
+        <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbar">
           <ul class="navbar-nav mb-lg-0 gap-3 align-items-center">
             <!-- <li class="nav-item">
               <a
@@ -144,71 +88,32 @@
             </li> -->
 
             <li class="nav-item">
-              <a
-                class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1"
-                [routerLink]="['/']"
-                fragment="speakers"
-                >Speakers</a
-              >
+              <a class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1" [routerLink]="['/']"
+                fragment="speakers">Speakers</a>
             </li>
 
             <li class="nav-item">
-              <a
-                class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1"
-                [routerLink]="['/']"
-                fragment="agenda"
-                >Agenda</a
-              >
+              <a class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1" [routerLink]="['/']"
+                fragment="agenda">Agenda</a>
             </li>
 
             <li class="nav-item">
-              <a
-                class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1"
-                [routerLink]="['/']"
-                fragment="sponsors"
-                >Sponsors</a
-              >
+              <a class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1" [routerLink]="['/']"
+                fragment="sponsors">Sponsors</a>
             </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1"
-                [routerLink]="['/']"
-                fragment="venue"
-                >Venue</a
-              >
-            </li>
-
-            <!-- <li class="nav-item">
-              <a
-                class="nav-link font-16 aii-dark-grey font-uppercase px-3 py-1"
-                [routerLink]="['/']"
-                fragment="coc"
-                >Coc</a
-              >
-            </li> -->
 
             <li>
-              <button
-                class="aii-btn-primary px-3 px-lg-5 h-auto py-3 font-20"
-                type="button"
-                [routerLink]="['/']"
-                fragment="pricing"
-              >
+              <button class="aii-btn-primary px-3 px-lg-5 h-auto py-3 font-20" type="button" [routerLink]="['/']"
+                fragment="pricing">
                 Buy Tickets
               </button>
             </li>
 
             <li class="nav-item d-flex align-items-center">
-              <button
-                type="button"
-                role="switch"
-                [attr.aria-pressed]="isDarkMode"
+              <button type="button" role="switch" [attr.aria-pressed]="isDarkMode"
                 class="theme-toggle-btn d-inline-flex align-items-center justify-content-center ms-2"
-                (click)="toggleTheme()"
-                [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
-                [attr.title]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
-              >
+                (click)="toggleTheme()" [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+                [attr.title]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
                 <span class="toggle-track">
                   <span class="toggle-thumb" [class.is-dark]="isDarkMode"></span>
                   <span class="toggle-icon icon-sun" [class.is-active]="!isDarkMode">
